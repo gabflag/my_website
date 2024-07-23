@@ -1,0 +1,373 @@
+/*##########################
+  Desktop Menu               
+  ##########################*/
+  .img-responsive{
+    margin-top: 20px;
+    width: 250px;
+    height: auto;
+}
+
+/* ######################### */
+/* Linhas                    */
+.linha-horizontal-top,
+.linha-horizontal-bottom {
+    position: fixed;
+    width: 250px;
+    height: 2px; 
+    background-color: var(--cor-cinza); 
+    margin: 0 auto; 
+}
+
+.linha-horizontal-top{
+    top: 100px;
+}
+
+.linha-horizontal-bottom{
+    bottom: 100px;
+}
+
+
+/* ######################### */
+/* Menu lateral de navegação */
+.containerMenuOpcoes{
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.opacao_menu{
+    border-radius: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.opacao_menu:hover{
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.4px);
+    -webkit-backdrop-filter: blur(12.4px);
+} 
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 20px;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  border-right: 2px solid var(--cor-cinza); 
+}
+
+/* Links do Menu */
+.sidebar a {
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--cor-branco-opaco);
+}
+
+/* Opcao do menu ativa no momento */
+.menu-options .active,
+.sidebar a.active {
+  color: var(--cor-branco);
+}
+
+.sidebar a.active .icon-svg {
+    color: var(--cor-branco)
+}
+
+/* Opcao do menu ao passar com mouse em cima */
+.sidebar a:hover:not(.active) {
+  color: var(--cor-branco);
+}
+
+.sidebar a:hover .icon-svg {
+    color: var(--cor-verde);
+    transform: rotate(360deg);
+}
+
+/* ####################### */
+/* Icones laterias do menu */
+.icon-svg {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: currentColor;
+    flex-shrink: 0;
+    margin-right: 8px;
+    transition: color 1.0s, transform 0.8s;
+}
+
+.icon-svg:hover {
+    color: var(--cor-verde);
+    transform: rotate(360deg);
+}
+
+.bandeira_container {
+    position: fixed;
+    min-width: 250px;
+    overflow: hidden;
+    bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bandeira_esquerda,
+.bandeira_direita {
+    height: auto;
+    width: 24px;
+    transition: transform 0.8s; 
+}
+
+.bandeira_esquerda:hover,
+.bandeira_direita:hover {
+    transform: rotate(-180deg);
+}
+
+
+.social{
+    position: fixed;
+    min-width: 250px;
+    overflow: hidden;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-rede-social-svg{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    fill: var(--cor-branco);
+    flex-shrink: 0;
+    margin-right: 8px;
+    transition: fill 2.0s, transform 0.8s;
+}
+
+.icon-rede-social-svg:hover {
+    fill: var(--cor-verde);
+    transform: rotate(360deg);
+}
+
+/*##########################
+  Mobile Menu               
+  ##########################*/
+
+
+  .hamburger-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+  .bars {
+    width: 20vw;
+    cursor: pointer;
+    padding: 0;
+    background-color: var(--cor-branco);
+    border-radius: 50px;
+  }
+
+  .bars .line {
+    fill: none;
+    stroke: var(--cor-verde-fonte-black);
+    stroke-width: 4;
+    stroke-linecap: square;
+    transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+  }
+  .bars .line.top {
+    stroke-dasharray: 40 172;
+  }
+  .bars .line.middle {
+    stroke-dasharray: 40 111;
+  }
+  .bars .line.bottom {
+    stroke-dasharray: 40 172;
+  }
+  .bars.active .top {
+    stroke-dashoffset: -132px;
+  }
+  .bars.active .middle {
+    stroke-dashoffset: -71px;
+  }
+  .bars.active .bottom {
+    stroke-dashoffset: -132px;
+  }
+
+
+.bottomBar{
+    position: fixed;
+    width:100%;
+    bottom: 0;
+    z-index: 999999;
+}
+
+.menu-links {
+    display: flex;
+    height: 8vw;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--cor-branco);
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: var(--cor-preto);
+}
+
+.menu-options {
+    display: none;
+    position: fixed;
+    color: var(--cor-branco);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-preto);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.menu-options a {
+    padding: 16px;
+    text-decoration: none;
+    color: var(--cor-branco-opaco);
+}
+
+.menu-options a:hover {
+    background-color: #555;
+    color: var(--cor-branco);
+}
+
+/* ICONE DO MENU */
+.icon_container_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon_svg_mobile{
+    width: 5vw;
+    height: 5vw;
+    margin-bottom: 4px;
+    fill: var(--cor-preto);
+}
+
+
+.close-button {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: var(--cor-branco);
+}
+
+
+/* MENU DE IDIOMAS MOBILE */
+.palavra-idioma-menu{
+    z-index: 2;
+    color: var(--cor-preto);
+}
+
+.menu-options-idioma{
+    display: none;
+    position: fixed;
+    color: var(--cor-branco);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-preto);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button-idioma {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: var(--cor-branco);
+}
+
+
+.menu-options-idioma a {
+    padding: 16px;
+    text-decoration: none;
+    color: var(--cor-branco-opaco);
+}
+
+.menu-options-idioma a:hover {
+    background-color: #555;
+    color: var(--cor-branco);
+}
+
+.menu-options-idioma .active{
+    color: var(--cor-branco);
+}
+
+/*##########################
+  RESPONSIVIDADE            
+  ##########################*/
+
+/* Desktop */
+@media screen and (min-width: 701px) {
+    .sidebar {
+        display: block; /* Exibe o menu principal em telas maiores */
+    }
+
+    .bottomBar {
+        display: none; /* Oculta o menu mobile em telas maiores */
+    }
+}
+
+
+@media screen and (max-height: 770px) {
+    .bandeira_esquerda,
+    .bandeira_direita {
+        width: 16px;
+    }
+
+    .social{
+        bottom: 15px;
+    }
+
+    .linha-horizontal-bottom{
+        bottom: 70px;
+    }    
+
+    .bandeira_container {
+        bottom: 90px;
+    }
+    
+    .opacao_menu{
+        font-size: 1.1vw;
+    }
+
+    .containerMenuOpcoes{
+        margin-top: 12%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        display: none; /* Oculta o menu principal em telas menores */
+    }
+
+    .bottomBar {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Aldrich-Regular';
+    src: url('../fontes/Aldrich/Aldrich-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Virgil';
+    src: url('../fontes/Virgil/Virgil.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variáveis */
+:root {
+    --cor-background-branco: radial-gradient(ellipse at bottom, #ffffff 0%, #ffffff 100%);
+    --cor-background-preto:#000000;
+
+    
+    --cor-branco: #ffffff;
+    --cor-branco-opaco: #ffffffa6;
+    --cor-preto: #000000;
+    --cor-preto-opaco: #00000088;
+    --cor-azul: #04a3ff;
+
+    --cor-verde: #39ff14;
+    --cor-verde-variable: #39ff14;
+    --cor-verde-black:#165b0a;
+    --cor-verde-fonte-black:#08782f;
+    --cor-verde-preenchimento:#cffcdf;
+
+    --cor-cinza: #adadad52;
+    
+ 
+    --cor-box-shadow-preto:-5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    --cor-box-shadow-after-preto:-5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+
+    --cor-box-shadow-azul: -5px -5px 15px #4169E1, 5px 5px 15px #1E90FF, inset 5px 5px 10px #1E90FF, inset -5px -5px 10px #4169E1;
+    --cor-box-shadow-after-azul: -5px -5px 15px #4169E1, 5px 5px 15px #1E90FF, inset 5px 5px 10px #4169E1, inset -5px -5px 10px #1E90FF;
+
+    --tipo-fonte-primaria: 'Aldrich-Regular', sans-serif; 
+    --tipo-fonte-secundaria: 'Virgil'; 
+    --tipo-fonte-terciaria: 'Courier New', monospace;
+
+    /* BOTOES */
+    --tamanho-fonte-desktop-botoes-micro: 0.7vw;
+    --tamanho-fonte-desktop-botoes-pequeno: 0.9vw;
+    --tamanho-fonte-desktop-botoes-medio: 1vw;
+    --tamanho-fonte-desktop-botoes-grande: 1.5vw;
+
+
+    --tamanho-fonte-mobile-botoes-medio: 4vw;
+
+    --tamanho-fonte-grande-desktop: 3.0em;
+    --tamanho-fonte-grande-desktop-responsiva:4vw;
+    
+    --tamanho-fonte-grande-subtitulo-desktop: 2.5em;
+    --tamanho-fonte-grande-subtitulo-desktop-responsiva:1.5vw;
+
+
+    --tamanho-fonte-grande-ultra-wide-desktop: 5.0em;
+    --tamanho-fonte-grande-mobile: 12vw;
+
+
+    /* APENAS MOBILE */
+    --tamanho-line-height-grande-mobile: 13vw;
+
+    --tamanho-fonte-media-mobile: 11vw;
+    --tamanho-fonte-02-mobile: 7vw;
+
+    --tamanho-fonte-pequena-mobile: 0.85em;
+    --tamanho-fonte-micro-mobile: 0.3em;
+
+    --tamanho-fonte-grande-banner-feedback: 4.3em;
+
+    --slideInFromBottom: slideInFromBottom 2s ease-out;
+    --slideInFromBottom1s: slideInFromBottom 1.5s ease-out;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.slide-in-global {
+    animation: var(--slideInFromBottom);
+}
