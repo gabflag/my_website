@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartWars</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+          }
+          
+          .fade {
+            position: relative;
+            width: 100%;
+            min-height: 60vh;
+            top: -25px;
+            background-image: linear-gradient(0deg, transparent, black 75%);
+            z-index: 1;
+          }
+          
+          .star_wars {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: 800px;
+            color: #feda4a;
+            font-family: 'Pathway Gothic One', sans-serif;
+            font-size: 500%;
+            font-weight: 600;
+            letter-spacing: 6px;
+            line-height: 150%;
+            perspective: 400px;
+            text-align: justify;
+          }
+          
+          .effect_crawl {
+            position: relative;
+            top: 99999px;
+            transform-origin: 50% 100%;
+            animation: crawl 60s linear;
+          }
+          
+          .effect_crawl > .title {
+            font-size: 90%;
+            text-align: center;
+          }
+          
+          .effect_crawl > .title h1 {
+            margin: 0 0 100px;
+            text-transform: uppercase;
+          }
+          
+          @keyframes effect_crawl {
+              0% {
+              top: -100px;
+              transform: rotateX(20deg)  translateZ(0);
+            }
+              100% { 
+              top: -6000px;
+              transform: rotateX(25deg) translateZ(-2500px);
+            }
+          }
+
+    </style>
+</head>
+<body>
+    <div class="fade"></div>
+
+<section class="star_wars">
+  <div class="effect_crawl">
+    <div class="title">
+      <p>Episode IV</p>
+      <h1>Python é FOd@</h1>
+    </div>
+        <p>Era um período de guerra civil. Programadores Jedi, habilidosos na arte da programação, travavam uma batalha contra o temido Império Galáctico.</p>
+    	<p>A partir de sua base oculta, as naves espaciais rebeldes lançavam ataques certeiros, conquistando sua primeira vitória contra o malvado Império.</p>
+        <p>Durante a batalha, espiões Jedi infiltrados conseguiram roubar os planos secretos da arma suprema do Império, o DEATH STAR, uma estação espacial blindada com poder suficiente para destruir um planeta inteiro.</p>
+        <p>Perseguido pelos agentes sinistros do Império, um programador Jedi em particular, em posse dos planos roubados, parte em uma corrida frenética de volta para sua base, em sua nave estelar, com a missão de salvar seu povo e restaurar a liberdade na galáxia...</p>      
+	</div>
+</section>
+</body>
+</html>
