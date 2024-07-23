@@ -33,7 +33,7 @@ body{
     right: 0px; 
     bottom: 0px; 
     left: 0px; 
-    background-image: url("../../images/produtos/header_desktop.png");
+    background-image: url("/static/images/produtos/header_desktop.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -253,7 +253,7 @@ body{
 		width: 100%;
 	 }
 	 .head::before { 
-		background-image: url("../../images/produtos/header_mobile.png");
+		background-image: url("/static/images/produtos/header_mobile.png");
 	} 
 
 

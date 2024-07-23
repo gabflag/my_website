@@ -24,7 +24,7 @@
 .footer {
     display: flex;
     margin: 0 auto;
-    background-image: url("../../images/produtos/footer.png");
+    background-image: url("/static/images/produtos/footer.png");
     background-size: cover;
     background-position: center;
     height: 300px;
