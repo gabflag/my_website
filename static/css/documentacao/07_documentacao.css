@@ -1,0 +1,166 @@
+.container_documentacao{
+    max-width: 80%;
+    color: var(--cor-branco);
+    min-height: 600px;
+}
+
+.container_filtro{
+    border-radius: 25px;
+    animation: var(--slideInFromBottom1s);
+    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+    transition: transform 0.5s;
+}
+
+.container_filtro:hover{
+    transform: scale(1.05); 
+}
+
+.titulo_filtros{
+    background-color: var(--cor-verde);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.titulo_filtros h3{
+    color: var(--cor-branco);
+    padding-top: 2%;
+    padding-left: 2%;
+    opacity: 1;
+}
+
+.filter_grid_template_columns{
+    display: grid;
+    border-radius: 25px;
+    grid-template-columns: auto auto auto auto;
+    padding: 2%;
+}
+
+.filter_grid_template_columns > div {
+    color: var(--cor-branco);
+    text-align: left;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -0.5em;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilizando o rótulo para simular o checkbox */
+input[type="checkbox"] + label {
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid var(--cor-verde);
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Estilizando o rótulo quando o checkbox está marcado */
+input[type="checkbox"]:checked + label {
+    color: var(--cor-preto);
+    box-shadow: rgba(0, 255, 17, 0.65) 0px 5px 15px;
+}
+
+input[type="checkbox"] + label:hover {
+    box-shadow: rgba(0, 255, 17, 0.65) 0px 5px 15px;
+}
+
+/* Estilo para o contêiner dos botões */
+.container_botoes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Estilo para os botões */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid var(--cor-preto);
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+    margin: 5px;
+}
+
+#btnFiltrar,
+#btnLimpar {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    transition: transform 0.5s;
+}
+
+#btnFiltrar:hover,
+#btnLimpar:hover{
+    transform: scale(0.95); 
+}
+
+.grid-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px 100px;
+}
+
+.grid-item {
+    color: var(--cor-branco);
+    min-height: 200px;
+    position: relative; 
+    border: 1px solid var(--cor-branco);
+    padding: 2%;
+    font-size: var(--tamanho-fonte-desktop-botoes-grande);
+    border-radius: 25px;
+    text-align: left;
+    transition: background-color 1s,transform 0.5s;
+}
+
+.grid-item h6,
+.grid-item span{
+    font-size: var(--tamanho-fonte-desktop-botoes-pequeno);
+    color: var(--cor-branco-opaco);
+    position: absolute;
+    bottom: 2%;
+    margin: 0;
+}
+
+.grid-item h6{
+    right: 5%; 
+}
+
+.grid-item span{
+    left: 5%;
+}
+
+.grid-item:hover{
+    transform: scale(1.05); 
+}
+
+@media (max-width: 700px) {
+    .container_documentacao{
+        max-width: 100%;
+    }
+
+    .container_filtro{
+        margin: 2%;
+    }
+    .grid-container {
+        grid-template-columns: auto; 
+        padding: 2%;
+    }
+
+    .grid-item {
+        font-size: var(--tamanho-fonte-media-mobile);
+    }
+
+    input[type="checkbox"] + label,
+    .grid-item span,
+    .grid-item h6{
+        font-size: var(--tamanho-fonte-micro-mobile);
+    }
+}
