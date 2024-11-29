@@ -14,3 +14,12 @@ for (var i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+window.onload = function() {
+  if (window.location.hash === "#services") {
+    var button = document.querySelector('#services-button');
+    if (button) {
+      button.click();
+    }
+  }
+};
