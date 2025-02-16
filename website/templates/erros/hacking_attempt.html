@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <h1>URGENTE - Tentativa de Hacking no Site da GabDeveloper</h1>
+        <p>Descrição da tentativa:</p>
+        <p>{{ attempt_description }}</p>
+        <br>
+        <p>Detalhes da solicitação:</p>
+        <br>
+        <ul>
+            <li>Horário: <strong>{{ current_time }}</strong></li>
+            <br>
+            <li>Endereço IP do atacante: <strong>{{ client_ip }}</strong></li>
+            <br>
+            <li>URL da solicitação: <strong>{{ request_url }}</strong></li>
+            <br>
+            <li>Método HTTP: <strong>{{ request_method }}</strong></li>
+            <br>
+            <li>User_agent: <pre>{{ user_agent }}</pre></li>
+            <br>
+            <li>Referrer: <pre>{{ referrer }}</pre></li>
+        </ul>
+    </body>
+</html>

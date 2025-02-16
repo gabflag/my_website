@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GabDev - Support</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow"/>
+    
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/suporte/06_suporte.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}"/>
+</head>
+
+<body>
+    
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+
+            // Destacar o menu desktop
+            if (document.getElementById('menusuporte')) {
+                document.getElementById('menusuporte').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('suporte')) {
+                document.getElementById('suporte').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+        <div class="container_suporte">
+
+            <div class="container_suporte_chamada">
+                <h1 class="chamada_suporte">HI 👋 <span>HOW </span>CAN WE<br><span>WE HELP?<br></span>..</h1>
+            </div>
+            
+            <div class="centralizacao_container">
+
+                <div class="container_opcoes_suporte">
+
+                    <div class="coluna">
+                        <button class="colapsar_suporte">
+                            <h3>I am a customer and need support<span class="icon">+</span></h3>
+                        </button>
+                        <div class="conteudo_suporte">
+                            <p>Contact us via email at gabdeveloper@protonmail.com. We guarantee a response within 48 hours (business days). Please provide as much detail as possible. 😉</p>
+                        </div>
+
+                        <button class="colapsar_suporte">
+                            <h3>I need to develop a new project<span class="icon">+</span></h3>
+                        </button>
+                        <div class="conteudo_suporte">
+                            <p>Contact us at <a href="https://wa.me/5548992059709?text=Hello%2C+I+hope+this+message+finds+you+well.+I+am+interested+in+developing+a+new+project.+We+can+talk%3F">+55 48 992059709</a> , and someone from the sales team will be at your disposal.</p>
+                        </div>
+                    </div>
+
+                    <div class="coluna">
+                        <button class="colapsar_suporte">
+                            <h3>I want to schedule a consultation<span class="icon">+</span></h3>
+                        </button>
+                        <div class="conteudo_suporte">
+                            <p>Specialized consultation for R$ 240 with up to 3 hours duration. The scheduling process is through the number <a href="https://wa.me/5548992059709?text=Hello%2C+I+hope+this+message+finds+you+well.+I+am+interested+in+your+consultancy.+We+can+talk%3F">+55 48 992059709</a>.</p>
+                        </div>
+
+                        <button class="colapsar_suporte">
+                            <h3>Store Product, Service, or Project<span class="icon">+</span></h3>
+                        </button>
+                        <div class="conteudo_suporte">
+                            <p>For technical issues, please contact us via email at gabdeveloper@protonmail.com with the subject "Technical Question." For less technical matters, use the number <a href="https://wa.me/5548992059709?text=Hello%2C+I+hope+this+message+finds+you+well.+I+have+questions%2C+can+we+talk%3F">+55 48 992059709</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="centralizacao_faq">
+                <div class="container_faq">
+                    
+                    <div class="item_duvidas">
+                        <h3>FREQUENTLY ASKED QUESTIONS:</h3>
+                    </div>
+
+                    <div class="coluna_faq">
+
+                        <button class="colapsar_faq">
+                            <h3>Can you help me install the VM?<span class="icon">↘️</span></h3>
+                        </button>
+                        <div class="conteudo_faq">
+                            <p>Yes, we have excellent instructional material on how you can install your virtual machine. However, we understand that it can be complex. The implementation cost for a VM is R$ 229.90, and the client needs to meet certain requirements before we proceed (Example: Machine allowing virtualization, stable internet access, and Teamviewer installed). The implementation is done entirely remotely.</p>
+                        </div>
+
+                        <button class="colapsar_faq">
+                            <h3>What is the standard support time for the purchased VMs?<span class="icon">↘️</span></h3>
+                        </button>
+                        <div class="conteudo_faq">
+                            <p>3 Months. All updates and new images are sent by email. The support does not include the implementation of new features; however, all inquiries will be considered for the development of new tools/updates.</p>
+                        </div>
+                        
+                        <button class="colapsar_faq">
+                            <h3>What is the average time and cost to create a website?<span class="icon">↘️</span></h3>
+                        </button>
+                        <div class="conteudo_faq">
+                            <p>It varies depending on the project specifications. Safer and modern websites take between 2 to 6 months and can have prices starting from R$ 7,890.90 for institutional models. For more elaborate projects, such as "mydecorator," a preliminary requirement analysis is needed. Institutional websites developed with WordPress, targeting small non-technical businesses with a limited budget and only for institutional purposes, have an initial cost of R$ 5,290.00 and a delivery time of at least 3 weeks. 
+                                <br>
+                                <br>
+                                We do not develop E-commerce, Streaming Platforms, or Course Platforms.</p>
+                        </div>
+
+                        <button class="colapsar_faq">
+                            <h3>Is WordPress not secure?<span class="icon">↘️</span></h3>
+                        </button>
+                        <div class="conteudo_faq">
+                            <p>We highly value the security of our software and clients. If it were not a valid option, we would not work with it. WordPress is a popular and efficient tool, representing approximately 38% of the websites on the internet. As its popularity is high, it becomes a target for attacks by other malicious IT professionals.
+                                <br>
+                                <br>
+                                Given that it follows CMS principles, plugins or themes are commonly used (often pirated). Since many individuals who develop WordPress sites are non-technical, it makes a significant portion of WordPress sites an excellent playground for hackers.
+                                <br>
+                                <br>
+                                With the right practices and in the hands of our programmers, who are technical professionals, it is a valid option that can meet the contractor's budget 😉.</p>
+                            </p>
+                        </div>
+                        
+                        <button class="colapsar_faq">
+                            <h3>What is the average time and cost to create an automation?<span class="icon">↘️</span></h3>
+                        </button>
+                        <div class="conteudo_faq">
+                            <p>The time and investment associated with automation development vary depending on the project's complexity. For simple scenarios, an executable program may be sufficient. However, for situations that require mouse control or when automation needs to interact with the client's computer, we recommend implementing a dedicated server. Contact us to discuss the specific details of your project and get a personalized estimate.</p>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        <!-- final div container-suporte -->
+        </div>
+    
+    {% include 'apresentacao/inicio/rodape_en.html' %}
+    <!-- final div content-->    
+    </div>
+        
+
+<!-- Colapsar conteudo -->
+<script>const staticPath = "{% static '' %}";</script>
+<script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+<script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+<script src="{% static 'scripts/02_mouse.js' %}"></script>
+<script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+<script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+<script src="{% static 'scripts/06_suporte_botoes.js' %}"></script>
+
+</body>
+</html>

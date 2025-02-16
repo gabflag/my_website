@@ -1,0 +1,69 @@
+<div class="titulo_detalhe_documentacao">
+    <h1>Virtual Machine Implementation Guide</h1>
+</div>
+
+<p>This guide provides step-by-step instructions for implementing a virtual machine using the <a href="https://www.virtualbox.org/">VirtualBox</a> virtualization platform on a Linux-based operating system. A virtual machine is a virtualized environment that allows running an operating system within another.</p>
+
+<div class="observacoes_detalhes_documentacao">
+    <h3>Requirements</h3>
+    <ul>
+        <li><strong>VirtualBox:</strong> Download and install VirtualBox from the <a href="https://www.virtualbox.org/">official website</a>.</li>
+        <li><strong>ISO Image of the Operating System:</strong> Download the ISO image of the operating system you want to install on the virtual machine.</li>
+        <li><strong>OS Permissions:</strong> Ensure that virtualization is enabled in your computer's BIOS.</li>
+    </ul>    
+</div>
+
+<div class="subtitulo_detalhes_documentacao">
+    <h2>Steps to Implement the Virtual Machine</h2>
+</div>
+
+<div class="conteduo_detalhes_documentacao">
+    <h3>1. VirtualBox Installation</h3>
+
+    <p>Follow the instructions on the <a href="https://www.virtualbox.org/">official VirtualBox website</a> to download and install the latest version of VirtualBox on your system.</p>
+
+    <h3>2. Creating a New Virtual Machine</h3>
+
+    <ol>
+        <li>Open VirtualBox and click on the "New" button in the menu bar.</li>
+        <li>Fill in the details of your virtual machine, such as name, type, and version of the operating system. Click "Next".</li>
+        <li>Choose the amount of RAM allocated to the virtual machine. At least 2 GB is recommended for modern operating systems. Click "Next".</li>
+        <li>Select "Create a virtual hard disk now" and click "Create".</li>
+    </ol>
+
+    <h3>3. Virtual Hard Disk Configuration</h3>
+
+    <ol>
+        <li>Choose the type of virtual hard disk file. The default is VDI (VirtualBox Disk Image). Click "Next".</li>
+        <li>Choose between a dynamically allocated (grows as needed) or fixed-size hard disk (occupies all specified space immediately). Click "Next".</li>
+        <li>Set the size of the virtual hard disk. A minimum of 25 GB is recommended for typical OS installations. Click "Create".</li>
+    </ol>
+
+    <h3>4. Configuration of the Operating System ISO Image</h3>
+
+    <ol>
+        <li>With the virtual machine selected, click "Settings".</li>
+        <li>Go to the "Storage" section and click on the empty disk icon under "Controller: IDE".</li>
+        <li>In the right panel, click the optical disk icon next to "Controller: IDE". Choose "Select a disk file" and navigate to the ISO image of the operating system. Click "OK".</li>
+    </ol>
+
+    <h3>5. Virtual Machine Startup</h3>
+
+    <ol>
+        <li>In the main VirtualBox window, select the newly created virtual machine and click "Start".</li>
+        <li>The virtual machine will boot from the ISO image. Follow the on-screen instructions to install the operating system.</li>
+        <li>After installation, remove the optical disk from the virtual machine (go back to settings and remove the ISO).</li>
+    </ol>
+
+    <h3>6. Additional Configurations (Optional)</h3>
+
+    <ol>
+        <li>For better integration, install <a href="https://www.virtualbox.org/manual/ch04.html">VirtualBox Guest Additions</a> on the virtual machine's operating system.</li>
+        <li>Configure other settings, such as folder sharing, network settings, etc., as needed.</li>
+    </ol>
+</div>
+
+<div class="consideracoes_detalhes_documentacao">
+    <h2>Final Considerations</h2>
+</div>
+<p>Now you have a functioning virtual machine within VirtualBox. Remember to adjust the virtual machine settings according to your specific needs.</p>

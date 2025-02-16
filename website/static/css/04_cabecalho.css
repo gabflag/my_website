@@ -1,0 +1,89 @@
+.linha-horizontal-top-content-mobile,
+.linha-horizontal-top-content{
+    left: 0;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 100px;
+    /* border-bottom: 2px solid var(--cor-cinza); */
+}
+
+.linha-horizontal-top-content-mobile{
+    align-items: center;
+    justify-content: center;
+}
+
+.linha-horizontal-top-content-mobile img{
+    width: 75%;
+    margin-left: 5%;
+    height: auto;
+    margin-right: auto;
+}
+
+.button-avaible {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    background-color: var(--cor-verde-preenchimento);
+    right: 0;
+    z-index: 777;
+    border-radius: 10px;
+    transition: color 1.0s, transform 0.8s;
+}
+
+.button-avaible h6 {
+    font-size: var(--tamanho-fonte-desktop-botoes-micro);
+    margin: 0;
+    padding: 8px;
+    color: #19b373;
+    letter-spacing: 2px;
+    transition: color 1.0s, transform 0.8s;
+}
+
+.bola{
+    font-size: var(--tamanho-fonte-desktop-botoes-grande);
+    vertical-align: middle;
+}
+
+.button-avaible:hover{
+    transform: scale(0.95);
+    color: var(--cor-branco-opaco);
+    box-shadow: 0 0 5px rgb(46, 146, 43),
+                0 0 10px rgb(46, 146, 43),
+                0 0 20px rgb(46, 146, 43),
+                0 0 40px rgb(46, 146, 43),
+                0 0 80px rgb(46, 146, 43);
+}
+
+.button-avaible h6:hover {
+    transform: rotateX(-360deg);
+}
+
+
+
+
+/*##########################
+  RESPONSIVIDADE            
+  ##########################*/
+
+/* Desktop */
+@media screen and (min-width: 701px) {
+    /* Oculta o linha mobile em telas maiores */
+    .linha-horizontal-top-content-mobile img,
+    .linha-horizontal-top-content-mobile {
+        display: none; 
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 700px) {
+    /* Oculta o linha desktop em telas maiores */
+    .linha-horizontal-top-content{
+        display: none; 
+    }
+}
+
+

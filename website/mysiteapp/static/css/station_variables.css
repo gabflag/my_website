@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Aldrich-Regular';
+    src: url('../fontes/Aldrich/Aldrich-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Virgil';
+    src: url('../fontes/Virgil/Virgil.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins_Extra';
+    src: url('../fontes/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--cor-fonte-primaria);
+ }
+
+:root {
+    --tipo-fonte-primaria: 'Aldrich-Regular', sans-serif; 
+    --tipo-fonte-secundaria: 'Poppins', sans-serif;
+    --tipo-fonte-terciaria: 'Poppins_Extra', sans-serif;
+
+
+    --cor-background:#151515;
+	--cor-pagina:black;
+
+	--cor-fonte-primaria:white;
+	--cor-fonte-secundaria:#f47321;
+
+    --cor-fonte-conjunto_01:#0ff;
+    --cor-fonte-conjunto_02:rgb(123, 255, 0);
+    --cor-fonte-conjunto_03:rgb(147, 0, 177);
+
+    --tamanho-fonte-extra-grande: 28px;
+    --tamanho-fonte-grande: 20px;
+    --tamanho-fonte-gigante: 60px;
+
+    --tamanho-fonte-media: 18px;
+    --tamanho-fonte-pequena: 14px;
+    --tamanho-fonte-micro: 20px;
+
+    --tamanho-fonte-mobile-botoes-medio: 4vw;
+    --tamanho-fonte-desktop-botoes-pequeno: 0.9vw;
+
+
+    --tamanho-fonte-extra-grande-mobile: 5vw;
+    --tamanho-fonte-gigante-mobile: 9vw;
+}
+
+/*##########################
+  Cursor do mouse           
+  ##########################*/
+  @media screen and (min-width: 701px) {
+    .dpkCursor {
+        height: 1.75rem;
+        width: 1.75rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border: 2px solid white;
+        mix-blend-mode: normal;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 999;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .dpkCursor {
+        height: none;
+        width: none;
+        position: none;
+        top: 0;
+        left: 0;
+        color: none;
+        border:none;
+        mix-blend-mode: none;
+        border-radius: none;
+        pointer-events: none;
+        z-index: none;
+    }
+}

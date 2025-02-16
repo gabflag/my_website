@@ -1,0 +1,196 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GabDev - About</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow"/>
+
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/sobre/04_sobre.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}"/>
+    
+</head>
+
+<body>
+    
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+
+            // Destacar o menu desktop
+            if (document.getElementById('menusobre')) {
+                document.getElementById('menusobre').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('sobre')) {
+                document.getElementById('sobre').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+
+        <div class="container_sobre">
+            <div class="container_fazer_acontecer">    
+                <h1 class="fazer_acontecer">IT'S <span>ABOUT </span>MAKING<br><span>IT HAPPEN<br></span>..</h1>
+            </div>
+
+            <div class="apresentacao">
+                <h3 id="typed-output"></h3>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var text = "Programmer with experience in technical support, full stack development, team management, and solving complex problems. Committed to delivering efficient and innovative solutions, applying industry best practices at every stage of the process.";
+                    var outputElement = document.getElementById('typed-output');
+                    var index = 0;
+
+                    function type() {
+                        outputElement.textContent += text[index];
+                        index++;
+
+                        if (index < text.length) {
+                            setTimeout(type, 40);
+                        }
+                    }
+
+                    setTimeout(type, 500);
+                });
+
+            </script>
+        
+            <div class="container_historia_gabdeveloper">
+                <div class="item_historia">
+                    <h3>HISTORY:</h3>
+                </div>
+
+                <div class='detalhe_historia'>
+                    <h5>
+                        <p>
+                            I am a programmer and technology enthusiast, guided by the principles of the Zen of Python and the best practices in project management.
+                            Although I am currently working predominantly in the construction industry – managing teams and operating independently (<a href="https://dametareformas.com">Dameta Reformas</a>)
+                            – I am always attentive to new opportunities and innovations in the tech world.
+                        </p>
+                        <p>
+                            I hold a degree in Systems Analysis and Development and have a broad educational background ranging from foundational tech skills, such as computer maintenance and electronics, 
+                            to advanced courses in areas like radio, Python, Git, Django, Pandas, microcontrollers, data analysis, MQL5, among others.
+                        </p>         
+                        For the past 4 years, I have been dedicated to developing personal projects and working as a freelancer, continuously enhancing my skills and expanding my experience in the field. Check out the 'Portfolio' section on this site to see my key projects.                    </h5>
+                </div>
+            </div>
+
+
+
+            {% include 'apresentacao/sobre/04_tecnologias.html' %}
+
+            <div class="container_atuacoes">
+                <div class="item_atuacoes">
+                    <h3>ACTUATIONS:</h3>
+                </div>
+
+                <div class="coluna">
+                    
+                    <button class="colapsar_atuacao">
+                        <img src="{% static 'images/apresentacao/sobrewebsites.png'%}" alt="blonde woman using computer and talking about training"/>
+                    </button>
+
+                    <div class="conteudo_colapsar">
+                        <p>Create engaging online experiences with our institutional pages or specific servers, designed to provide exceptional performance and security to your clients.</p>
+                    </div>
+
+                    <button class="colapsar_atuacao">
+                        <img src="{% static 'images/apresentacao/support.png'%}" alt="a man talking on the phone providing technical support in IT"/> 
+                    </button>
+                    <div id="services" class="conteudo_colapsar">
+                        <p>Need help with your computer? We offer specialized technical support to ensure the best performance and security for your devices. Check out our services:</p>
+                        <p><strong>Data Recovery:</strong> We recover files and information from damaged or formatted hard drives.</p>
+                        <p><strong>Secure Data Erasure:</strong> We permanently erase sensitive information from hard drives, ensuring your privacy.</p>
+                        <p><strong>System Formatting and Installation:</strong> We configure and optimize your system, installing Windows, Linux, or other operating systems of your choice.</p>
+                        <p><strong>Virus and Malware Removal:</strong> We detect and eliminate malicious software to protect your data and enhance system performance.</p>
+                        <p><strong>Hardware Diagnostics and Repair:</strong> We identify and fix hardware issues, including component replacements and upgrades.</p>
+                        <p><strong>Network Setup and Troubleshooting:</strong> We configure secure and reliable network connections, solving connectivity issues.</p>
+                        <p><strong>Remote Technical Support:</strong> Quick and convenient solutions for software-related issues without leaving your home.</p>                    
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <button class="colapsar_atuacao">
+                        <img src="{% static 'images/apresentacao/virtual_machines.png'%}" alt="woman using virtual reality (VR) glasses and talking about virtual machines"/>
+                    </button>
+                    <div class="conteudo_colapsar">
+                        <p>Explore the maximum potential of your business with our Dedicated Virtual Machines. We offer the flexibility needed for tasks that require exclusivity, as well as support for firewall, email, VoIP servers, and a range of tools that require a fully dedicated environment.</p>
+                    </div>
+                    
+                    <button class="colapsar_atuacao">
+                        <img src="{% static 'images/apresentacao/task_automation.png'%}" alt="man and woman in the VoIP and firewall server room"/>
+                    </button>
+                    <div class="conteudo_colapsar">
+                        <p>Improve your operational efficiency and free up valuable time with a task automation solution. Whether it’s spreadsheet manipulation, sending notifications, data collection or reporting.</p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="containerBotao">
+                <a href="/portfolio" class='button_loja'>
+                    <div class="content_button_loja">Check the Portfolio</div>
+                    <span class="arrow-icon">➔</span>
+                </a>
+            </div>
+
+            <div class="container_historia_gabdeveloper">
+                <div class="item_historia">
+                    <h3>CONTACT:</h3>
+                    <div class='detalhe_historia'>
+                        <h5>I am available to establish a bridge of contact via
+                            <a href="mailto:gabdeveloper@protonmail.com?subject=Came from your website" target="_blank">gabdeveloper@protonmail.com</a>,
+                            through the number <a href="https://wa.me/5548991206137?text=Hello%2C+I+hope+this+message+finds+you+well.+I+just+checked+out+your+website+and+would+like+to+ask+some+questions." target="_blank">55 48 9 9120-6137</a>
+                            or send me a message on <a href="https://www.linkedin.com/in/gks-developer/" target="_blank">Linkedin</a>.
+                            </h5>
+                    </div>
+                </div>
+            </div>
+
+        <!-- final div container-sobre -->
+        </div>
+        
+
+        {% include 'apresentacao/inicio/rodape_en.html' %}
+
+    <!-- final div content -->
+    </div>
+
+
+    <!-- Colapsar conteudo -->
+    <script>const staticPath = "{% static '' %}";</script>
+    <script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+    <script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+    <script src="{% static 'scripts/02_mouse.js' %}"></script>
+    <script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+    <script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+    <script src="{% static 'scripts/05_sobre_butoes.js' %}"></script>
+
+</body>
+</html>

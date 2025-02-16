@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GabDev - Documentação</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow"/>
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/documentacao/07_documentacao.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}"/>
+
+</head>
+
+<body>
+    
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+            // Destacar o menu desktop
+            if (document.getElementById('menudocumentacao')) {
+                document.getElementById('menudocumentacao').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('documentation')) {
+                document.getElementById('documentation').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+    
+    
+            <div class="container_documentation">
+                <div class="grid-container">
+    
+                    <a href="/documentation/how_to_deploy_a_virtual_machine" class="documentation-tag" data-categorias="tips">    
+                        <div class="grid-item">
+                            <h5>
+                                How to deploy a virtual machine in virtualbox?
+                            </h5>
+                            <span>Tips</span>
+                            <h6>5 min</h6>
+                        </div>
+                    </a>
+    
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7265483887605108736/" class="documentation-tag" data-categorias="ai">    
+                        <div class="grid-item">
+                            <h5>
+                                Binary classification implemented in a Django system.
+                            </h5>
+                            <span>AI - Django</span>
+                            <h6>6 min</h6>
+                        </div>
+                    </a>
+    
+                    <a href="/documentation/mql5_program_for_market_trend_identification_using_moving_averages" class="documentation-tag" data-categorias="mql5">    
+                        <div class="grid-item">
+                            <h5>
+                                MQL5 Program for Market Trend Identification Using Moving Averages.
+                            </h5>
+                            <span>MQL5</span>
+                            <h6>4 min</h6>
+                        </div>
+                    </a>
+    
+                </div>
+            </div>
+
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var checkboxes = document.querySelectorAll('[type="checkbox"]');
+                    var btnFiltrar = document.getElementById('btnFiltrar');
+                    var btnLimpar = document.getElementById('btnLimpar');
+            
+                    function aplicarFiltro() {
+                        var categoriasSelecionadas = Array.from(checkboxes)
+                            .filter(checkbox => checkbox.checked)
+                            .map(checkbox => checkbox.value);
+            
+                        var tags = document.querySelectorAll('.documentacao-tag');
+                        tags.forEach(tag => {
+                            var categoriasTag = tag.getAttribute('data-categorias').split(' ');
+                            var exibirTag = categoriasSelecionadas.length === 0 || categoriasSelecionadas.some(categoria => categoriasTag.includes(categoria));
+                            tag.style.display = exibirTag ? 'block' : 'none';
+                        });
+                    }
+            
+                    btnFiltrar.addEventListener('click', aplicarFiltro);
+            
+                    function limparFiltros() {
+                        checkboxes.forEach(checkbox => checkbox.checked = false);
+                        aplicarFiltro();
+                    }
+            
+                    btnLimpar.addEventListener('click', limparFiltros);
+                    limparFiltros();
+
+                });
+
+                
+            </script>
+         {% include 'apresentacao/inicio/rodape_en.html' %}
+        </div>
+    
+    <!-- final div content-->    
+    </div>
+        
+
+<!-- Colapsar conteudo -->
+<script>const staticPath = "{% static '' %}";</script>
+<script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+<script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+<script src="{% static 'scripts/02_mouse.js' %}"></script>
+<script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+<script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+
+</body>
+</html>

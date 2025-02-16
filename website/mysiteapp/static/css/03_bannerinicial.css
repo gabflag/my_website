@@ -1,0 +1,179 @@
+/*##########################
+Primeira sessão*/
+.chamada{
+    width: 80%;
+    animation: var(--slideInFromBottom);
+}
+
+.bannerDesktop{
+    width: 80%;
+}
+
+.espacadorTexto{
+    height: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.containerBotao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+
+.chamada .bannerDesktop{
+    font-size: var(--tamanho-fonte-grande-desktop);
+    color: var(--cor-branco);
+    line-height: 60px;
+    letter-spacing: 5px;
+    animation: slidein 3s;
+}
+
+.chamada .bannerDesktop span {
+    color: var(--cor-preto);
+    background-color: var(--cor-branco);
+    padding-top: 18px;
+}
+
+.bannerMobile{
+    padding-left: 10px;
+    color: var(--cor-branco);
+    font-size: var(--tamanho-fonte-grande-mobile);
+    line-height: var(--tamanho-line-height-grande-mobile);
+    word-break: break-word;
+}
+
+.bannerMobile span{
+    color: var(--cor-preto);
+    background-color: var(--cor-branco);
+    padding-top: 0.25em;
+}
+
+
+#travessao {
+    display: inline-block;
+    animation: piscar 3s infinite;
+    background-color: none;
+  }
+  
+  @keyframes piscar {
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+.button_loja{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 250px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--tipo-fonte-primaria);
+    border: 0.5px solid var(--cor-cinza);
+    box-shadow: 0 0 5px rgb(145, 145, 145); 
+    color: var(--cor-branco);
+    transition: transform 0.5s;
+}
+
+.content_button_loja{
+    transition: color 1.0s, transform 0.8s;
+}
+
+.content_button_loja:hover{
+    transform: rotateX(-360deg);
+}
+
+.button_loja:hover {
+    border: 0.7px solid var(--cor-cinza);
+    color: var(--cor-branco-opaco);
+    transform: scale(0.95); /* Diminui 5% do tamanho ao passar o mouse */
+
+}
+
+.button_loja:focus {
+    outline: none; /* Remove a borda de foco padrão no clique */
+}
+
+.button_loja .arrow-icon {
+    margin-left: 5px; /* Ajusta a distância entre o texto e o ícone */
+    transition: color 1.0s, transform 0.8s;
+}
+
+
+.button_loja:hover .arrow-icon {
+    transform: scale(0.95);
+    color: var(--cor-verde);
+    transform: rotate(-360deg);
+}
+
+
+/*##########################
+  RESPONSIVIDADE            
+  ##########################*/
+
+/* Banner Desktop */
+@media screen and (min-width: 701px) {
+    .bannerDesktop {
+        display: block; 
+    }
+
+    .bannerMobile {
+        display: none; 
+    }
+}
+
+/* Banner Mobile */
+@media screen and (max-width: 700px) {
+    .bannerDesktop {
+        display: none;
+    }
+
+    .bannerMobile {
+        display: block; 
+    }
+}
+
+/* Estilo para telas ultrawide */
+@media screen and (min-aspect-ratio: 21/9) {
+    .chamada .bannerDesktop{
+        font-size: var(--tamanho-fonte-grande-ultra-wide-desktop);
+        line-height: 80px;
+        letter-spacing: 10px;
+    }
+}
+
+/* Estilo para telas NÃO ultrawide*/
+@media screen and (max-aspect-ratio: 16/9) {
+    .chamada .bannerDesktop{
+        font-size: var(--tamanho-fonte-grande-desktop);
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+
+    .containerBotao{
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .chamada,
+    .bannerDesktop{
+        width: 100%;
+    }
+    
+    
+}

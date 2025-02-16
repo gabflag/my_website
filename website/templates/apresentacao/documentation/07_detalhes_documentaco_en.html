@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GabDev - Documentations</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow"/>
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/documentacao/07_detalhes_documentacao.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}"/>
+
+</head>
+
+<body>
+    
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+            // Destacar o menu desktop
+            if (document.getElementById('menudocumentation')) {
+                document.getElementById('menudocumentation').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('documentation')) {
+                document.getElementById('documentation').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+
+        <div class="grid-container">
+            <div class="container_localizacao_e_home">
+                <a href="/">
+                    <svg class="icone_home" viewBox="0 0 24 24">
+                        <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path>
+                    </svg>
+                </a>
+                <a href="/documentation">
+                    <h6><span>..</span> Documentations/{{ indicativo|safe }}</h6>
+                </a>
+            </div>
+        
+            <a href="/documentation" class="container_voltar_documentacao">
+                <svg class="icone_voltar" viewBox="0 0 512 512">
+                    <g transform="translate(0.0,512) scale(0.1,-0.1)">
+                        <path d="M368 4898 c-21 -5 -58 -28 -82 -50 -83 -72 -76 125 -76 -2285 0
+                            -1609 3 -2156 12 -2191 16 -64 86 -134 150 -150 35 -9 582 -12 2191 -12 2409
+                            0 2213 -6 2285 75 23 27 44 63 51 90 16 63 16 4307 0 4370 -7 27 -28 63 -51
+                            90 -72 82 125 75 -2292 74 -1380 -1 -2164 -5 -2188 -11z m2487 -1305 c96 -48
+                            140 -150 109 -253 -15 -52 -33 -72 -377 -418 l-362 -362 372 -373 c407 -409
+                            413 -416 399 -514 -18 -134 -142 -216 -269 -179 -49 15 -78 41 -519 483 -321
+                            322 -472 480 -483 505 -22 55 -19 116 10 174 18 37 134 158 467 491 407 406
+                            447 443 493 457 55 17 112 13 160 -11z" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <div class="container_detalhes_documentacao">
+            <p>{{ conteudo | safe }}</p>
+        <!-- final div container_detalhes_documentacao -->
+        </div>
+
+    {% include 'apresentacao/inicio/rodape_en.html' %}
+    <!-- final div content-->    
+    </div>
+        
+
+<!-- Colapsar conteudo -->
+<script>const staticPath = "{% static '' %}";</script>
+<script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+<script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+<script src="{% static 'scripts/02_mouse.js' %}"></script>
+<script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+<script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+
+</body>
+</html>

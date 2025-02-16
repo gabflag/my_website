@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GabDev - Store</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow"/>
+
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/portfolio/05_portfolio.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}"/>
+
+</head>
+
+<body>
+    
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+    {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+
+            // Destacar o menu desktop
+            if (document.getElementById('menuportfolio')) {
+                document.getElementById('menuportfolio').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('portfolio')) {
+                document.getElementById('portfolio').classList.add('active');
+            }
+        }
+    </script>
+
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div class="content">
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+
+        <div class="container_portfolio">
+            
+            <h3 class="fade-in">
+                <p>The projects showcased here reflect my expertise in Linux servers and the vast ecosystem of tools surrounding them. </p>
+                <p>You will find solutions in Python, Full Stack applications, automation, data manipulation, applied mathematics, and much more.</p>
+                <p>Feel free to explore and get to know my work.</p>
+                
+            </h3>
+
+            <div class="grid-container">
+                <a href="https://gabdeveloper.com/static/videos/saas_project.mp4" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            Payment integration with Stripe and AI image generator
+                        </h5>
+                    </div>
+                </a>
+            
+                <a href="https://github.com/gabflag/nn_prostate_cancer" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            Binary Classification Neural Network - Prostate Cancer
+                        </h5>
+                    </div>
+                </a>
+
+                <a href="https://github.com/gabflag/dameta" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            WordPress site developed on a virtual machine and hosted as a static page on GitHub Pages
+                        </h5>
+                    </div>
+                </a>
+
+                <a href="https://github.com/gabflag/python_hand_landmark" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            Pose and Hand Detection with MediaPipe
+                        </h5>
+                    </div>
+                </a>
+            
+                <a href="https://github.com/gabflag/flashcard" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            Study Software Using Spaced Repetition Method
+                        </h5>
+                    </div>
+                </a>
+            
+                <a href="https://github.com/gabflag/send_emails_with_python" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            Email Sending with Python
+                        </h5>
+                    </div>
+                </a>
+
+                <a href="https://github.com/gabflag/neo" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            Test lab for automated trading algorithms.
+                        </h5>
+                    </div>
+                </a>
+
+                <a href="https://github.com/gabflag/add_audio_to_video_python" target="_blank">    
+                    <div class="grid-item">
+                        <h5>
+                            Automatically adding audio and cover to video with Python.
+                        </h5>
+                    </div>
+                </a>
+
+            </div>            
+        </div>
+    
+
+
+    {% include 'apresentacao/inicio/rodape_en.html' %}
+    <!-- final div content-->    
+    </div>
+
+<!-- Colapsar conteudo -->
+<script>const staticPath = "{% static '' %}";</script>
+<script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+<script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+<script src="{% static 'scripts/02_mouse.js' %}"></script>
+<script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+<script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+
+</body>
+</html>

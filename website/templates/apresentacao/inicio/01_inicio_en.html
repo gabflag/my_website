@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GabDev - Home</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <meta name="robots" content="index, follow"/>
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/inicio/01_preloader.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/02_menu.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/03_bannerinicial.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/04_cabecalho.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/05_softwares.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/06_feedbackbanner.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/07_testemonials.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/09_saas_project.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/08_footer.css'%}"/>
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="overlay"></div>
+        <img src="{% static 'images/apresentacao/logoBranca1323.png'%}" id="logo_abertura" class="imgload" />
+    </div>
+    
+    {% include 'apresentacao/inicio/swiitch.html' %}
+
+    <!-- ########################## -->
+    <!-- Menus                      -->
+    <!-- ########################## -->
+    <div id="menus_container">
+        {% include 'apresentacao/inicio/menu_desktop_en.html' %}
+        {% include 'apresentacao/inicio/menu_mobile_en.html' %}
+    </div>
+
+    <script>
+        window.onload = function () {
+            destacarMenus();
+        };
+
+        function destacarMenus() {
+            // Destacar o menu desktop
+            if (document.getElementById('menuinicio')) {
+                document.getElementById('menuinicio').classList.add('active');
+            }
+
+            // Destacar o menu mobile
+            if (document.getElementById('inicio')) {
+                document.getElementById('inicio').classList.add('active');
+            }
+        }
+    </script>
+
+    <!-- ########################## -->
+    <!-- Page Content               -->
+    <!-- ########################## -->
+    <div  id="content" class="content">
+
+        {% include 'apresentacao/inicio/cabecalho_en.html' %}
+
+        {% include 'apresentacao/inicio/banner_inicial_en.html' %}
+
+        {% include 'apresentacao/inicio/softwares_recentes_en.html' %}
+        
+        {% include 'apresentacao/inicio/feedback_banner.html' %}
+
+        {% include 'apresentacao/inicio/testemonials_en.html' %}
+        
+        {% include 'apresentacao/inicio/saas_project_en.html' %}
+
+        {% include 'apresentacao/inicio/rodape_en.html' %}
+
+    <!-- final div content -->
+    </div>
+    <script>const staticPath = "{% static '' %}";</script>
+    <script src="{% static 'scripts/07_loading.js' %}"></script>
+    <script src="{% static 'scripts/00_rolar_tela.js' %}"></script>
+    <script src="{% static 'scripts/01_mudar_tema.js' %}"></script>
+    <script src="{% static 'scripts/02_mouse.js' %}"></script>
+    <script src="{% static 'scripts/03_menu_mobile.js' %}"></script>
+    <script src="{% static 'scripts/04_menu_idioma.js' %}"></script>
+</body>
+</html>

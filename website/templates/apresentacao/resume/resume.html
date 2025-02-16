@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GabDev - Resume</title>
+    {% include 'apresentacao/inicio/mainMetas.html' %}
+    <link rel="stylesheet" href="{% static 'css/01_global.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/resume/resume.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/00_variables.css'%}"/>
+    <meta name="robots" content="index, follow"/>
+</head>
+
+<body>
+    <div class="conteiner_video">
+        <video width="100%" height="auto" autoplay loop controls preload="metadata">
+            <source src="{% static 'videos/resume.mp4'%}"type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <a href="https://wa.me/5548992059709?text=Hello%2C+I+hope+this+message+finds+you+well.+I+am+interested+in+developing+a+new+project.+We+can+talk%3F">
+            <h3>Phone</h3>
+        </a>
+    </div>
+    
+<script>const staticPath = "{% static '' %}";</script>
+<script src="{% static 'scripts/02_mouse.js' %}"></script>
+
+</body>
+</html>
