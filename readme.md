@@ -13,8 +13,9 @@ Ferramentas recomendadas:
 
 
 ## 🚀 Otimização do Site
-Habilitar GZIP: Comprime os arquivos de texto para melhorar o tempo de carregamento. Ferramenta útil: checkgzipcompression
-Habilitar Cache: Para otimizar o desempenho do site, configure o cache dos recursos estáticos.
+- Habilitar GZIP: Comprime os arquivos de texto para melhorar o tempo de carregamento
+- Ferramenta útil: checkgzipcompression
+- Habilitar Cache: Para otimizar o desempenho do site, configure o cache dos recursos estáticos.
 
 ## 📦 Pacotes Necessários para Deploy
 Antes de começar, execute os seguintes comandos para garantir que o ambiente está atualizado e com todas as dependências instaladas:
