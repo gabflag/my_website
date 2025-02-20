@@ -1790,3 +1790,166 @@ django.template.exceptions.TemplateDoesNotExist: apresentacao/inicio/menu_deskto
 [20/Feb/2025 01:43:14] "GET /documentation/mql5_program_for_market_trend_identification_using_moving_averages/ HTTP/1.1" 200 20606
 [20/Feb/2025 01:43:14] "GET /static/css/documentacao/07_detalhes_documentacao.css HTTP/1.1" 200 3047
 [20/Feb/2025 01:43:15] "GET /static/videos/station_reduzido.mp4 HTTP/1.1" 200 5515277
+Watching for file changes with StatReloader
+[20/Feb/2025 01:55:15] "GET / HTTP/1.1" 200 26053
+Not Found: /robots.txt
+[20/Feb/2025 01:55:15] "GET /robots.txt HTTP/1.1" 404 3172
+[20/Feb/2025 01:55:16] "GET /static/images/icons/favicon_default.png HTTP/1.1" 200 15350
+[20/Feb/2025 01:55:16] "GET /static/images/icons/favicon144.png HTTP/1.1" 200 8170
+[20/Feb/2025 01:55:16] "GET /static/images/icons/favicon114.png HTTP/1.1" 200 6296
+[20/Feb/2025 01:55:16] "GET /static/images/icons/favicon72.png HTTP/1.1" 200 3777
+[20/Feb/2025 01:55:16] "GET /static/images/icons/favicon192.png HTTP/1.1" 200 11466
+[20/Feb/2025 01:55:16] "GET /static/images/icons/favicon512.png HTTP/1.1" 200 36127
+[20/Feb/2025 01:55:16] "GET /static/images/icons/favicon228.png HTTP/1.1" 200 13942
+[20/Feb/2025 01:55:16] "GET /static/css/00_variables.css HTTP/1.1" 200 2731
+[20/Feb/2025 01:55:16] "GET /static/css/01_global.css HTTP/1.1" 200 3431
+[20/Feb/2025 01:55:16] "GET /static/css/inicio/01_preloader.css HTTP/1.1" 200 984
+[20/Feb/2025 01:55:16] "GET /static/css/02_menu.css HTTP/1.1" 200 6603
+[20/Feb/2025 01:55:16] "GET /static/css/03_bannerinicial.css HTTP/1.1" 200 3407
+[20/Feb/2025 01:55:16] "GET /static/css/04_cabecalho.css HTTP/1.1" 200 1901
+[20/Feb/2025 01:55:16] "GET /static/css/05_softwares.css HTTP/1.1" 200 3323
+[20/Feb/2025 01:55:16] "GET /static/css/06_feedbackbanner.css HTTP/1.1" 200 860
+[20/Feb/2025 01:55:16] "GET /static/css/07_testemonials.css HTTP/1.1" 200 2346
+[20/Feb/2025 01:55:16] "GET /static/css/09_saas_project.css HTTP/1.1" 200 1963
+[20/Feb/2025 01:55:16] "GET /static/css/08_footer.css HTTP/1.1" 200 865
+[20/Feb/2025 01:55:16] "GET /static/images/apresentacao/logoBranca1323.png HTTP/1.1" 200 23104
+[20/Feb/2025 01:55:16] "GET /static/images/apresentacao/logoBranca720.png HTTP/1.1" 200 57364
+[20/Feb/2025 01:55:16] "GET /about HTTP/1.1" 301 0
+[20/Feb/2025 01:55:16] "GET /about/ HTTP/1.1" 200 26805
+[20/Feb/2025 01:55:16] "GET /portfolio HTTP/1.1" 301 0
+[20/Feb/2025 01:55:16] "GET /portfolio/ HTTP/1.1" 200 20233
+[20/Feb/2025 01:55:16] "GET /documentation HTTP/1.1" 301 0
+[20/Feb/2025 01:55:16] "GET /documentation/ HTTP/1.1" 200 20376
+Not Found: /softwares
+[20/Feb/2025 01:55:16] "GET /softwares HTTP/1.1" 404 3169
+[20/Feb/2025 01:55:16] "GET /static/images/apresentacao/mydecorator.png HTTP/1.1" 200 2594070
+[20/Feb/2025 01:55:16] "GET /static/images/apresentacao/analise_negocios_chamada.png HTTP/1.1" 200 1398609
+[20/Feb/2025 01:55:17] "GET /static/images/apresentacao/firewall.png HTTP/1.1" 200 1057707
+[20/Feb/2025 01:55:17] "GET /static/images/feedbacks/guilherme.png HTTP/1.1" 200 5824
+[20/Feb/2025 01:55:17] "GET /static/images/feedbacks/paulo.png HTTP/1.1" 200 5169
+[20/Feb/2025 01:55:17] "GET /static/images/feedbacks/sofia.png HTTP/1.1" 200 5790
+[20/Feb/2025 01:55:17] "GET /static/images/feedbacks/marina.png HTTP/1.1" 200 5668
+[20/Feb/2025 01:55:17] "GET /static/images/feedbacks/matheus.png HTTP/1.1" 200 5888
+[20/Feb/2025 01:55:17] "GET /static/videos/saas_project.mp4 HTTP/1.1" 200 42862890
+[20/Feb/2025 01:55:17] "GET /privacy HTTP/1.1" 301 0
+Internal Server Error: /privacy/
+Traceback (most recent call last):
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: apresentacao/inicio/menu_desktop.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/website/mysiteapp/views.py", line 70, in privacy
+    return render(request, 'apresentacao/politica_privacidade/02_privacidade_en.html', status=200)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: apresentacao/inicio/menu_desktop.html
+[20/Feb/2025 01:55:17] "GET /privacy/ HTTP/1.1" 500 122585
+[20/Feb/2025 01:55:17,387] - Broken pipe from ('127.0.0.1', 40516)
+[20/Feb/2025 01:55:17] "GET /terms HTTP/1.1" 301 0
+Internal Server Error: /terms/
+Traceback (most recent call last):
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: apresentacao/inicio/menu_desktop.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/website/mysiteapp/views.py", line 77, in terms
+    return render(request, 'apresentacao/termos_de_uso/03_termos_en.html', status=200)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/wolf/Desktop/gabdeveloper_website-main/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: apresentacao/inicio/menu_desktop.html
+[20/Feb/2025 01:55:17] "GET /terms/ HTTP/1.1" 500 122089
+[20/Feb/2025 01:55:17,407] - Broken pipe from ('127.0.0.1', 40534)
+[20/Feb/2025 01:55:17] "GET /static/scripts/07_loading.js HTTP/1.1" 200 764
+[20/Feb/2025 01:55:17] "GET /static/scripts/00_rolar_tela.js HTTP/1.1" 200 2666
+[20/Feb/2025 01:55:17] "GET /static/scripts/01_mudar_tema.js HTTP/1.1" 200 2542
+[20/Feb/2025 01:55:17] "GET /static/scripts/02_mouse.js HTTP/1.1" 200 1314
+[20/Feb/2025 01:55:17] "GET /static/scripts/03_menu_mobile.js HTTP/1.1" 200 1019
+[20/Feb/2025 01:55:17] "GET /static/scripts/04_menu_idioma.js HTTP/1.1" 200 2118
+[20/Feb/2025 01:55:17] "GET /static/fontes/Aldrich/Aldrich-Regular.ttf HTTP/1.1" 200 53324
+[20/Feb/2025 01:55:17] "GET /static/fontes/Virgil/Virgil.ttf HTTP/1.1" 200 80720
+[20/Feb/2025 01:55:17] "GET /static/css/sobre/04_sobre.css HTTP/1.1" 200 5674
+[20/Feb/2025 01:55:17] "GET /static/images/apresentacao/sobrewebsites.png HTTP/1.1" 200 141867
+[20/Feb/2025 01:55:17] "GET /static/images/apresentacao/support.png HTTP/1.1" 200 140069
+[20/Feb/2025 01:55:17] "GET /static/images/apresentacao/virtual_machines.png HTTP/1.1" 200 139437
+[20/Feb/2025 01:55:17] "GET /static/images/apresentacao/task_automation.png HTTP/1.1" 200 136063
+[20/Feb/2025 01:55:17] "GET /static/scripts/05_sobre_butoes.js HTTP/1.1" 200 524
+[20/Feb/2025 01:55:17] "GET /static/css/portfolio/05_portfolio.css HTTP/1.1" 200 1297
+[20/Feb/2025 01:55:17] "GET /static/css/documentacao/07_documentacao.css HTTP/1.1" 200 1305
+[20/Feb/2025 01:55:18] "GET /documentation/how_to_deploy_a_virtual_machine HTTP/1.1" 301 0
+[20/Feb/2025 01:55:18] "GET /documentation/how_to_deploy_a_virtual_machine/ HTTP/1.1" 200 22813
+[20/Feb/2025 01:55:18] "GET /documentation/mql5_program_for_market_trend_identification_using_moving_averages HTTP/1.1" 301 0
+[20/Feb/2025 01:55:18] "GET /documentation/mql5_program_for_market_trend_identification_using_moving_averages/ HTTP/1.1" 200 20606
+[20/Feb/2025 01:55:18] "GET /static/css/documentacao/07_detalhes_documentacao.css HTTP/1.1" 200 3047
+[20/Feb/2025 01:55:18] "GET /static/videos/station_reduzido.mp4 HTTP/1.1" 200 5515277
