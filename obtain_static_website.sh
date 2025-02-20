@@ -65,3 +65,4 @@ echo "Parando o servidor Django..."
 kill_process_on_port 8000
 
 echo "Processo concluído!"
+
