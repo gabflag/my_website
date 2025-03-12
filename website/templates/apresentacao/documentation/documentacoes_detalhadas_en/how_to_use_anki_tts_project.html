@@ -1,0 +1,99 @@
+<div class="titulo_detalhe_documentacao">
+    <h1>Anki Card Generator - Implementation Guide</h1>
+</div>
+
+<p>This guide provides a step-by-step implementation for using the <strong>Anki Card Generator</strong>, a tool that automates the creation of Anki flashcards with AI-generated audio. This software allows users to generate study cards efficiently by converting text into speech and integrating them directly into Anki.</p>
+<p>The Anki Card Generator is available for Ubuntu users. On Ubuntu, it can be used via an <strong>AppImage</strong>, allowing easy execution without installation.</p>
+
+<div class="subtitulo_detalhes_documentacao">
+    <h2>Steps to Implement the Anki Card Generator</h2>
+</div>
+
+<div class="conteduo_detalhes_documentacao">
+    <h3>1. Configure Anki Media Path</h3>
+    <ol>
+        <li>Click "Select Folder" in the software interface.</li>
+        <li>Choose the directory where media files will be saved for Anki.</li>
+    </ol>
+
+    <h3>2. Define the Deck Name</h3>
+    <ol>
+        <li>Enter the desired deck name where flashcards will be stored.</li>
+    </ol>
+
+    <h3>3. Select Voice for Audio Generation</h3>
+    <ol>
+        <li>Use predefined names from the <code>default.txt</code> file or choose "random", "male", or "female" options.</li>
+    </ol>
+
+    <h3>4. Upload a Card File</h3>
+    <ol>
+        <li>Select a properly formatted file containing flashcard data.</li>
+    </ol>
+
+    <h3>5. Generate Audio for Cards</h3>
+    <ol>
+        <li>Click "Generate Audio" to process the text-to-speech conversion.</li>
+    </ol>
+
+    <h3>6. Preview and Edit Cards</h3>
+    <ol>
+        <li>Review generated cards before finalizing the process (optional).</li>
+    </ol>
+
+    <h3>7. Add Cards to Anki</h3>
+    <ol>
+        <li>Click "Add to Anki" to send the processed cards directly to Anki.</li>
+    </ol>
+
+    <h3>8. Clear Processing Logs</h3>
+    <ol>
+        <li>If needed, click the "Clear" button to remove old logs.</li>
+    </ol>
+</div>
+
+<div class="subtitulo_detalhes_documentacao">
+    <h2>Possible Errors and Solutions</h2>
+</div>
+
+<div class="conteduo_detalhes_documentacao">
+    <table border="1" cellspacing="0" cellpadding="4">
+        <tr><th>Error</th><th>Possible Cause</th><th>Solution</th></tr>
+        <tr>
+            <td><b>⚠ Anki Path Not Displayed</b></td>
+            <td>Incorrect path configuration.</td>
+            <td>Re-select the correct directory.</td>
+        </tr>
+        <tr>
+            <td><b>🎙 Error Generating Audio</b></td>
+            <td>Text contains incompatible characters.</td>
+            <td>Review and correct text input.</td>
+        </tr>
+        <tr>
+            <td><b>📂 Card File Not Loading</b></td>
+            <td>Unsupported file format.</td>
+            <td>Ensure the file follows the expected format.</td>
+        </tr>
+        <tr>
+            <td><b>🔄 Cards Not Appearing in Anki</b></td>
+            <td>Upload failure.</td>
+            <td>Ensure Anki is open and AnkiConnect is installed and active.</td>
+        </tr>
+        <tr>
+            <td><b>⚠ Error During Audio Generation</b></td>
+            <td>Incorrect speaker name in <code>default.txt</code>.</td>
+            <td>Verify and correct the names.</td>
+        </tr>
+    </table>
+</div>
+
+
+<iframe src="https://www.youtube.com/embed/dnzIUkJLZI8" frameborder="0"></iframe>
+
+<div class="consideracoes_detalhes_documentacao">
+    <h2>Final Considerations</h2>
+</div>
+<p>By following this guide, you can efficiently generate and integrate Anki flashcards with AI-generated audio. Ensure that all configurations are properly set to maximize performance.</p>
+
+<p>🚀 Ready to enhance your study experience? <a href="https://panda2jz.gumroad.com/l/ankitts_english_version">Get the Anki Card Generator now!</a></p>
+<p> lso check out the repository with the source code: <a href="https://github.com/gabflag/anki_tts_automation">Source Code</a></p>
