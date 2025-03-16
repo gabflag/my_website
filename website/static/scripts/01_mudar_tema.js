@@ -45,9 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateLogoLink(darkMode) {
-        const path = staticPath.startsWith('/') ? staticPath.slice(1) : staticPath;
-        const novoLink = darkMode ? path + 'images/apresentacao/logoAzul720.png' : path + 'images/apresentacao/logoBranca720.png';
+        const novoLink = darkMode 
+            ? '/static/images/apresentacao/logoAzul720.png' 
+            : '/static/images/apresentacao/logoBranca720.png';
+    
         logoEmpresa.src = novoLink;
         logoEmpresaLInha.src = novoLink;
     }
+
 });
