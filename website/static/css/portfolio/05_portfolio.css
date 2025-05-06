@@ -5,11 +5,10 @@
 }
 
 .grid-container {
-    margin-top: 5%;
-    margin-bottom: 5%;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 50px 100px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    width: 100%
 }
 
 .grid-item {
@@ -45,26 +44,67 @@
     transform: scale(1.05); 
 }
 
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.tech-stack {
+    font-size: 0.75rem;
+    color: var(--cor-branco-opaco);
+    margin-bottom: 8px;
+}
+
+
+.learn-more {
+    font-size: var(--tamanho-fonte-desktop-botoes-pequeno);
+    color: var(--cor-branco);
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.grid-item h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--cor-branco);
+    font-weight: 600;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
 @media (max-width: 700px) {
-    .container_portfolio{
+    .container_portfolio {
         max-width: 100%;
+        padding: 0 16px;
     }
 
-    .container_filtro{
+    .container_filtro {
         margin: 2%;
     }
+
     .grid-container {
-        grid-template-columns: auto; 
-        padding: 2%;
+        grid-template-columns: auto;
+        padding: 0;
     }
 
     .grid-item {
         font-size: var(--tamanho-fonte-media-mobile);
     }
 
-    input[type="checkbox"] + label,
-    .grid-item span,
-    .grid-item h6{
+    .learn-more {
         font-size: var(--tamanho-fonte-micro-mobile);
     }
 }
+

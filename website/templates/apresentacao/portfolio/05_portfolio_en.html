@@ -53,104 +53,120 @@
         {% include 'apresentacao/inicio/cabecalho_en.html' %}
 
         <div class="container_portfolio">
-            
-            <h3 class="fade-in">
-                <p>The projects showcased here reflect my expertise in Linux servers and the vast ecosystem of tools surrounding them. </p>
-                <p>You will find solutions in Python, Full Stack applications, automation, data manipulation, applied mathematics, and much more.</p>
-                <p>Feel free to explore and get to know my work.</p>
-                
-            </h3>
-
             <div class="grid-container">
-                <a href="https://gabdeveloper.com/static/videos/saas_project.mp4" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Payment integration with Stripe and AI image generator
-                        </h5>
-                    </div>
-                </a>
-            
-                <a href="https://github.com/gabflag/nn_prostate_cancer" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Binary Classification Neural Network - Prostate Cancer
-                        </h5>
-                    </div>
-                </a>
 
-                <a href="https://www.youtube.com/watch?v=dnzIUkJLZI8&t" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Offline TTS for Anki and Automation
-                        </h5>
-                    </div>
-                </a>
+                <div class="grid-item">
+                    <h4>StoryTeller with AI</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/prostate_cancer.png' %}" alt="Neural Network Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, TensorFlow, NumPy, Matplotlib</p>
 
-                <a href="https://github.com/gabflag/dameta" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            WordPress site developed on a virtual machine and hosted as a static page on GitHub Pages
-                        </h5>
-                    </div>
-                </a>
+                    <p class="tech-stack">
+                        <a href="https://panda2jz.gumroad.com/l/storyteller" target="_blank" class="learn-more">Gumroad Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=oVXpVmxa5yU" target="_blank" class="learn-more">Youtube</a>.
+                    </p>                      
+                </div>
 
-                <a href="https://github.com/gabflag/python_hand_landmark" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Pose and Hand Detection with MediaPipe
-                        </h5>
-                    </div>
-                </a>
-            
-                <a href="https://github.com/gabflag/flashcard" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Study Software Using Spaced Repetition Method
-                        </h5>
-                    </div>
-                </a>
-            
-                <a href="https://github.com/gabflag/send_emails_with_python" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Email Sending with Python
-                        </h5>
-                    </div>
-                </a>
+                <div class="grid-item">
+                    <h4>Payment Integration with Stripe and AI Image Generator</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/ia_renovating.png' %}" alt="Stripe AI Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, Django, JavaScript, Stripe API, OpenAI API</p>
+                    <a href="https://gabdeveloper.com/static/videos/saas_project.mp4" target="_blank" class="learn-more">View the Video</a>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Binary Classification Neural Network - Prostate Cancer</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/prostate_cancer.png' %}" alt="Neural Network Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, TensorFlow, NumPy, Matplotlib</p>
 
-                <a href="https://github.com/gabflag/neo" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Test lab for automated trading algorithms.
-                        </h5>
-                    </div>
-                </a>
+                    <p class="tech-stack">
+                        <a href="https://github.com/gabflag/nn_prostate_cancer" target="_blank" class="learn-more">View on GitHub</a>
+                        or watch the video on
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7265483887605108736/" target="_blank" class="learn-more">LinkedIn</a>.
+                    </p>                      
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Monte Carlo Simulation</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/montecarlo.png' %}" alt="Monte Carlo Simulation" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, Tkinter</p>
+                    <p class="tech-stack">
+                        <a href="https://panda2jz.gumroad.com/l/MonteCarloSimulation" target="_blank" class="learn-more">Gumroad Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=-HTBRNcnn1o" target="_blank" class="learn-more">Youtube</a>.
+                    </p>      
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Office Replacer - Automate Your Document Workflow</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/officereplacer.png' %}" alt="Office Replacer Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, Tkinter</p>
+                    <p class="tech-stack">
+                        <a href="https://panda2jz.gumroad.com/l/office_replacer" target="_blank" class="learn-more">Gumroad Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=GrTmyXIoVAw" target="_blank" class="learn-more">Youtube</a>.
+                    </p>  
+                
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Offline TTS for Anki and Automation</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/ankitts.png' %}" alt="Offline TTS Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, TTS, Automation, Anki</p>
+                    <p class="tech-stack">
+                        <a href="https://panda2jz.gumroad.com/l/ankitts_english_version?layout=profile" target="_blank" class="learn-more">Gumroad Store</a>
+                        or watch the video on
+                        <a href="https://www.youtube.com/watch?v=dnzIUkJLZI8&t" target="_blank" class="learn-more">Youtube</a>.
+                    </p>    
+                </div>
 
-                <a href="https://github.com/gabflag/add_audio_to_video_python" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Automatically adding audio and cover to video with Python.
-                        </h5>
-                    </div>
-                </a>
-
-
-
-                <a href="https://github.com/gabflag/my_website/blob/main/obtain_static_website.sh" target="_blank">    
-                    <div class="grid-item">
-                        <h5>
-                            Obtain a Static Django website
-                        </h5>
-                    </div>
-                </a>                
+                <div class="grid-item">
+                    <h4>Extract and analyze company data from Google Maps</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/extract.png' %}" alt="WordPress on VM Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Pandas, BeuatifulSoup, Numpy</p>
+                    <a href="" target="_blank" class="learn-more">On-demand demo</a>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>WordPress site on VM, hosted on GitHub Pages</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/wordpress_vm.png' %}" alt="WordPress on VM Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: WordPress, VirtualBox, GitHub Pages, Bash</p>
+                    <a href="https://github.com/gabflag/dameta" target="_blank" class="learn-more">View on GitHub</a>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Pose and Hand Detection with MediaPipe</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/hand_pose.png' %}" alt="Hand Detection Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, MediaPipe, OpenCV</p>
+                    <a href="https://github.com/gabflag/python_hand_landmark" target="_blank" class="learn-more">View on GitHub</a>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Spaced Repetition Study Software</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/flashcard.png' %}" alt="Flashcard Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, SQLite, Tkinter</p>
+                    <a href="https://github.com/gabflag/flashcard" target="_blank" class="learn-more">View on GitHub</a>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Email Sending with Python</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/send_email.png' %}" alt="Email Sender Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, SMTP, Automation</p>
+                    <a href="https://github.com/gabflag/send_emails_with_python" target="_blank" class="learn-more">View on GitHub</a>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>Automated Trading Lab</h4>
+                    <img src="{% static 'images/apresentacao/portifolio/neo_trading.png' %}" alt="Trading Lab Project" class="project-thumbnail">
+                    <p class="tech-stack">Key technologies: Python, MQL5, Backtesting</p>
+                    <a href="https://github.com/gabflag/neo" target="_blank" class="learn-more">View on GitHub</a>
+                </div>                             
             </div>            
         </div>
     
-
-
-    {% include 'apresentacao/inicio/rodape_en.html' %}
-    <!-- final div content-->    
-    </div>
+{% include 'apresentacao/inicio/rodape_en.html' %}
+<!-- final div content-->    
+</div>
 
 <!-- Colapsar conteudo -->
 <script>const staticPath = "{% static '' %}";</script>
