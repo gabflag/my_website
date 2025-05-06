@@ -84,6 +84,20 @@
     padding: 20px;
 }
 
+.project-links {
+    font-size: 0.8rem;
+    color: var(--cor-branco-opaco);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.project-links a.learn-more {
+    font-size: 0.85rem;
+    color: var(--cor-branco);
+    text-decoration: underline;
+}
+
+
 @media (max-width: 700px) {
     .container_portfolio {
         max-width: 100%;
@@ -103,8 +117,12 @@
         font-size: var(--tamanho-fonte-media-mobile);
     }
 
-    .learn-more {
-        font-size: var(--tamanho-fonte-micro-mobile);
+    .project-links {
+        font-size: 0.9rem;
+    }
+
+    .project-links a.learn-more {
+        font-size: 0.95rem;
     }
 }
 
