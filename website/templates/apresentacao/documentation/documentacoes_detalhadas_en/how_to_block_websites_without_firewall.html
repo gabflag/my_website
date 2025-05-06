@@ -25,7 +25,8 @@
     <p>This script restores the original <code>/etc/hosts</code> file, removing any blocking rules. Paste the content you copied in step 1. Example:</p>
 
     <pre><code>#!/bin/bash
-sudo tee /etc/hosts > /dev/null <<EOF
+
+sudo tee /etc/hosts &gt; /dev/null &lt;&lt;EOF
 127.0.0.1 localhost
 ::1 ip6-localhost ip6-loopback
 fe00::0 ip6-localnet
@@ -33,7 +34,7 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 EOF
 </code></pre>
-
+        
     <p>Give execution permission to the script:</p>
     <pre><code>chmod +x /usr/local/bin/permit_all.sh</code></pre>
 
@@ -41,7 +42,7 @@ EOF
     <p>This script modifies the <code>/etc/hosts</code> file to block social media by redirecting them to localhost:</p>
 
     <pre><code>#!/bin/bash
-sudo tee /etc/hosts > /dev/null <<EOF
+sudo tee /etc/hosts &gt; /dev/null &lt;&lt;EOF
 127.0.0.1 localhost
 127.0.1.1 wolf-notebook
 ::1 ip6-localhost ip6-loopback
