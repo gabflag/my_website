@@ -1,0 +1,105 @@
+<div class="titulo_detalhe_documentacao">
+    <h1>How to Block or Limit Website Access on Linux</h1>
+</div>
+
+<p>This guide serves as a reference for those who want to block access to social media during working hours — without needing to configure firewalls, proxies, or other complex solutions. We'll use only a Bash script and Linux's task scheduler, <code>cron</code>. If you prefer, you can watch the <a href="https://www.virtualbox.org/">tutorial video</a> available at the bottom of the page.</p>
+
+<div class="observacoes_detalhes_documentacao">
+    <h3>Requirements</h3>
+    <ul>
+        <li><strong>Linux Operating System:</strong> basic knowledge of permissions and system structure.</li>
+        <li><strong>Bash:</strong> basic scripting knowledge.</li>
+        <li><strong>Cron:</strong> familiarity with the Linux task scheduler.</li>
+    </ul>    
+</div>
+
+<div class="subtitulo_detalhes_documentacao">
+    <h2>Step-by-step</h2>
+</div>
+
+<div class="conteudo_detalhes_documentacao">
+    <h3>1. Make a copy of the current <code>/etc/hosts</code> content</h3>
+    <p>Copy the current content of the <code>/etc/hosts</code> file. This will preserve your system's default configuration for later use.</p>
+
+    <h3>2. Create the script <code>/usr/local/bin/permit_all.sh</code></h3>
+    <p>This script restores the original <code>/etc/hosts</code> file, removing any blocking rules. Paste the content you copied in step 1. Example:</p>
+
+    <pre><code>#!/bin/bash
+sudo tee /etc/hosts > /dev/null <<EOF
+127.0.0.1 localhost
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+EOF
+</code></pre>
+
+    <p>Give execution permission to the script:</p>
+    <pre><code>chmod +x /usr/local/bin/permit_all.sh</code></pre>
+
+    <h3>3. Create the script <code>/usr/local/bin/block_sites.sh</code></h3>
+    <p>This script modifies the <code>/etc/hosts</code> file to block social media by redirecting them to localhost:</p>
+
+    <pre><code>#!/bin/bash
+sudo tee /etc/hosts > /dev/null <<EOF
+127.0.0.1 localhost
+127.0.1.1 wolf-notebook
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+#BLACK LIST
+127.0.0.1 facebook.com www.facebook.com
+127.0.0.1 m.facebook.com static.facebook.com
+127.0.0.1 instagram.com www.instagram.com
+127.0.0.1 l.instagram.com cdninstagram.com static.cdninstagram.com
+EOF
+</code></pre>
+
+    <p>Give execution permission:</p>
+    <pre><code>chmod +x /usr/local/bin/block_sites.sh</code></pre>
+
+    <h3>4. Create the script <code>/usr/local/bin/network_control.sh</code></h3>
+    <p>This script decides which of the previous scripts to run based on the current system time:</p>
+
+    <pre><code>#!/bin/bash
+HOUR=$(date +%H)
+
+if [ "$HOUR" -ge 8 ] && [ "$HOUR" -lt 20 ]; then
+    echo "Working hours – blocking sites"
+    /usr/local/bin/block_sites.sh
+else
+    echo "Off-hours – allowing sites"
+    /usr/local/bin/permit_all.sh
+fi
+</code></pre>
+
+    <p>Give execution permission:</p>
+    <pre><code>chmod +x /usr/local/bin/network_control.sh</code></pre>
+
+    <h3>5. Schedule automatic execution with Cron</h3>
+    <p>As root, edit the crontab using:</p>
+    <pre><code>crontab -e</code></pre>
+
+    <p>At the end of the file, add the following lines:</p>
+    <pre><code>@reboot /usr/local/bin/network_control.sh
+@hourly /usr/local/bin/network_control.sh
+</code></pre>
+
+    <p>
+        The <code>@reboot</code> command ensures the script runs every time the computer starts.<br>
+        The <code>@hourly</code> command checks hourly whether it's still working hours.
+    </p>
+</div>
+
+<div class="consideracoes_detalhes_documentacao">
+    <h2>Final Considerations</h2>
+</div>
+
+<p>
+    You now have a lightweight and effective system to block websites during work hours — ideal for those working from home or looking to reduce distractions without technical complications.
+</p>
+
+<iframe src="https://www.youtube.com/embed/-80vVcuYla4?si=CVLJ8L27LCGEq2Mx" frameborder="0"></iframe>
+
